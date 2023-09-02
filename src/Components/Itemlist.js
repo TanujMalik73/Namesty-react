@@ -7,7 +7,7 @@ const Itemlist = ({ listdata }) => {
     <div className="p-4 my-2">
       {listdata.map((data) => {
         return (
-          <div className="flex justify-between my-2">
+          <div key={data.card.info.id} className="flex justify-between my-2">
             <h1>{data.card.info.name}</h1>
             <button
               onClick={() => {

@@ -40,8 +40,8 @@ const RestaurantMenu_Layout = () => {
         );
 
       setMenuItems(menuItemsData);
-      // console.log(restaurant);
-      // console.log(menuItemsData);
+      console.log(restaurant);
+      console.log(menuItems);
     } catch (error) {
       setMenuItems([]);
       setRestaurant(null);
@@ -63,7 +63,7 @@ const RestaurantMenu_Layout = () => {
         </div>
       </div> */}
           {menuItems.map((data,index) => {
-            return <div>
+            return <div key={data?.title} > 
               <Menulist menudata={data} showitem={index==showIndex&&true} setshowitem={()=>setshowIndex(index)}></Menulist>
               </div>
           })}
